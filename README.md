@@ -1,4 +1,4 @@
-#Movie Catalog
+# Movie Catalog
  
  
  ## Project Overview
@@ -16,9 +16,11 @@
 
 ## Launching the Virtual Machine:
   1. Launch the Vagrant VM inside Vagrant sub-directory in the downloaded fullstack-nanodegree-vm repository in your shell using command:
+  
    `vagrant up`
  
   2. Then Log into this using command:
+  
    `vagrant ssh`
 
   3. Change directory to /vagrant /catalog
