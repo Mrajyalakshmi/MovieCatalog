@@ -35,13 +35,14 @@
   
   2. To insert default movie data 
   
-    python database_init.py
+    `python database_init.py`
 
   3.To start the web browser:
   
    `python app.py`
    
-  4. open browser to view the web application
+  4. Open browser to view the web application:
+  
    `http://localhost:8000`
    
    `http://localhost:8000/genre`
