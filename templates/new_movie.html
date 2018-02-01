@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>New Item</h2>
+
+    <form class="form-inline action="{{url_for('new_movie')}}" method="POST">
+        <label for="name">Name:</label>
+        <input class="form-control" type="text" size="30" name="name" value="{{input_name}}">
+        <br><br>
+        <label for="description">Description:</label>
+        <input class="form-control" type="text" size="50" name="description" value="{{input_description}}">
+        <br><br>
+        <label for="picture">Picture URL:</label>
+        <input class="form-control" type ="url" id="picture" maxlength="250" name="picture" value="{{input_pictutre}}" placeholder= "http://www.example.com">
+         <br><br>
+        <label for="category">Genre:</label>
+        <select class="form-control" name="genre">
+            {% if not default_genre %}
+                <option selected="selected" {# disabled="disabled"  #}value="None">Select a genre</option>
+            {% endif %}
+            {% for genre in genres %}
+                {% if genre.name == default_genre %}
+                    <option selected="selected" value="{{genre.name}}">{{genre.name}}</option>
+                {% else %}
+                    <option value="{{genre.name}}">{{genre.name}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <input class="form-control" type="submit" value="Create">
+    </form>
+
+{% endblock %}

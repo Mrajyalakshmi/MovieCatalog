@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block body %}
+    <h2>Recent entries:</h2>
+    {% for movie in movies %}
+    <div class="col-md-6 col-lg-4 movie-tile text-center">
+    <a href="{{url_for('show_movie', genre_id=movie.genre.id, movie_id=movie.id)}}"><img src="{{movie.picture}}" width="220" height="220">
+     </a>
+    <h2>{{movie.genre.name}}</h2>
+</div>
+    <!-- </a>
+    <br> -->
+    {% endfor %}
+{% endblock %}

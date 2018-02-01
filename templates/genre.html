@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block body %}
+    <h2>{{genre.name}} Movies:</h2>
+    {% for movie in movies %}
+
+    <div class="col-md-4">
+    <div class="movie-tile text-center">
+    <a href="{{url_for('show_movie', genre_id=movie.genre.id, movie_id=movie.id)}}"><img src="{{movie.picture}}" width="220" height="220">
+     </a>
+    <h2>{{movie.name}}</h2>
+    </div>
+    </div>
+
+    {% endfor %}
+{% endblock %}
