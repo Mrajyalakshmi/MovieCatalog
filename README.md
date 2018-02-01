@@ -33,7 +33,7 @@
   
      `python database_setup.py`
   
-  2. To insert default movie data 
+  2. To insert default movie data. 
   
     `python database_init.py`
 
