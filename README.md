@@ -35,7 +35,7 @@
   
   2. To insert default movie data 
   
-    `python database_init.py`
+    python database_init.py
 
   3.To start the web browser:
   
